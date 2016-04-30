@@ -1,5 +1,4 @@
 import pymysql
-import boto.route53
 
 connection = pymysql.connect(host='localhost',user='root',password='y0y0M@!',db='urldb')
 
@@ -15,6 +14,3 @@ def insert_entry(long_url,short_url):
         cursor.execute(sql, (long_url,short_url))
     connection.commit()
     connection.close()
-
-def send_to_route53(short_url):
-    connection = boto.route53.connect_to_region('us-east-1')
