@@ -19,5 +19,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-	url(r'^', views.get_url, name='get_url'),
+    url(r'^$', views.get_url, name='get_url'),
+    url(r'^.*', views.redirect_url, name='redirect_url'),
 ]
