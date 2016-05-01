@@ -1,6 +1,6 @@
 import pymysql
 
-connection = pymysql.connect(host='localhost',user='root',password='y0y0M@!',db='urldb')
+connection = pymysql.connect(host='aa1umvpzcwrqqf5.cyjsfa15axuh.us-east-1.rds.amazonaws.com',user='smithurl',password='..Wide..Open',db='ebdb')
 
 def collision_detector(short_url):
     with connection.cursor() as cursor:
